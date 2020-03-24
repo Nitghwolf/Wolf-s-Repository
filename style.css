@@ -1,6 +1,7 @@
 body {
+  position: relative;
   margin: 0;
-  min-width: 960px;
+  min-width: 1408px;
   font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
   font-size: 16px;
   line-height: 32px;
@@ -12,14 +13,14 @@ body {
 }
 
 .container {
-  max-width: 928px;
+  max-width: 1408px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
 .page-header {
-  margin: 0 0 160px;
-  padding: 32px 0 32px;
+  margin: 0 0 140px;
+  padding: 32px 0;
 }
 
 .page-header .container,
@@ -30,10 +31,23 @@ body {
 
 .page-header a {
   margin-left: 56px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   color: #288be6;
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: left;
+}
+
+.page-header a:focus,
+.page-header a:hover {
+  border-bottom: 1px solid #288be6;
+  filter: hue-rotate(50deg);
+}
+
+.page-header a:active {
+  filter: hue-rotate(0);
+  opacity: 0.6;
 }
 
 .header-email {
@@ -47,19 +61,22 @@ body {
 }
 
 .hero-image {
+  position: relative;
   margin-bottom: 620px;
 }
 
 .hero-image .container {
   max-width: 1408px;
   text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .heading {
-  margin: 0 0 16px;
+  margin: 0 0 40px;
   font-family: "Old Standard TT", "Times", "Times New Roman", serif;
-  font-size: 88px;
-  line-height: 96px;
+  font-size: 104px;
+  line-height: 120px;
   font-weight: 400;
 }
 
@@ -70,7 +87,23 @@ body {
 }
 
 .intro {
-  margin: 0 0 120px;
+  margin: 0 0 160px;
+  padding-bottom: 20px;
+}
+
+.intro .container {
+  position: relative;
+}
+
+.intro .subheading::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: -32px;
+  width: 16px;
+  height: 28px;
+  background-image: url("img/icon-scroll.svg");
+  background-repeat: no-repeat;
 }
 
 .subheading {
@@ -86,6 +119,7 @@ body {
   margin: 0 0 32px;
   text-align: center;
 }
+
 
 .intro h3,
 .portfolio h3 {
@@ -172,12 +206,11 @@ body {
 .page-footer {
   padding: 40px 0;
   background-color: #00417d;
-  color: #ffffff;
 }
 
 .page-footer a {
   margin-left: 56px;
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: left;
