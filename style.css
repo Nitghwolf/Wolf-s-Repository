@@ -12,6 +12,24 @@ body {
   background-position: top center;
 }
 
+.theme-button {
+  color: #6653d9;
+  border: 1px solid #6653d9;
+}
+.theme-button::before {
+  background-image: url("img/moon-normal.svg");
+}
+.theme-button:focus,
+.theme-button:hover {
+  color: #ffffff;
+  background-color: #6653d9;
+}
+.theme-button:focus::before,
+.theme-button:hover::before {
+  background-image: url("img/moon-hover.svg");
+}
+
+
 .container {
   max-width: 1408px;
   margin: 0 auto;
@@ -167,6 +185,10 @@ body {
   height: 12px;
   background-color: #288be6;
   border-radius: 6px;
+}
+
+.portfolio .button {
+  margin-bottom: 100px;
 }
 
 .portfolio {
